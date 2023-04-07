@@ -1,0 +1,21 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+            "label": "Build&Run",
+            "type": "shell",
+            "command": "gcc-9 -fdiagnostics-color=always -g test.c -o build/test\n./build/test",
+            "problemMatcher": [
+                "$gcc"
+            ]
+        },
+        {
+            "label": "CompileNVCCAndRun",
+            "type": "shell",
+            "command": "nvcc -o build/calculateSha512 calculateSha512.cu\n./build/calculateSha512",
+            "problemMatcher": [
+                "$gcc"
+            ]
+        }
+	]
+}
